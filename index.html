@@ -7,11 +7,11 @@
    <link rel="stylesheet" href="style.css">
     <title>calculator</title>
 </head>
-<body>
+<body> 
     <div class="contailner">
     <div class="calculator">
         <input type="text" placeholder="0" id="output-screen">
-         <button onclick="clear()">clear</button>
+         <button onclick="Clear()">clr</button>
          <button onclick="del()">del</button>
          <button onclick="display('%')">%</button>
          <button onclick="display('/')">/</button>
@@ -39,17 +39,18 @@
         }
         function calculate(){
             try{
-                outputscreen.value=eval(outputscreen);
+                outputscreen.value=eval(outputscreen.value);
             }
-            catch{
-                alert(invalid);
+            catch(err){
+                alert("invalid");
             }
         }
-        function clear(){
-     outputscreen.value = "";
-        }
+      function Clear(){
+        outputscreen.value= "";
+
+      }
         function del(){
-outputscreen.value=outputscreen.value.slice(0,-1)            
+            outputscreen.value=outputscreen.value.slice(0,-1)            
         }
  </script>
 </body>
